@@ -20,6 +20,18 @@ class String
   end
 
   def count_sentences
+    new_array = self.split
+
+    epoch = 0 
+    count = 0 
+    while epoch < new_array.length
+      if new_array[epoch].end_with?(".") || new_array[epoch].end_with?("?") || new_array[epoch].end_with?("!")
+        count += 1
+      end
+
+    epoch += 1
+    end
+    return count
 
   end
 end
